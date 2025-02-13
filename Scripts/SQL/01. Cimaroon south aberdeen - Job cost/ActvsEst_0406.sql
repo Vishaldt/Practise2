@@ -12,6 +12,10 @@ drop view dt_inovar_prod_edw.v_aberdeen_jobcost
 
 CREATE OR REPLACE VIEW dt_inovar_prod_edw.v_aberdeen_jobcost as*/
 
+
+ abc 
+
+
 select job,dt::date,sum(actual_hours) actual_hours, sum(estimated_hours)estimated_hours  from dt_inovar_prod_edw.u_mat_aberdeen_jobcost 
 where dt::date>='2024-01-01'
 group by 1,2
